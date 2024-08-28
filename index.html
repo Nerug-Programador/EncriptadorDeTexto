@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <header class="header">
+    </header>
+    <main class="main">
+        <section class="Logo-section">
+            <img class="Logo-section__img" src="./img/Logo.png" alt="logo Alura">
+        </section>
+        
+        
+        <textarea id="texto-entrada" class="text-section__textarea" placeholder="Ingrese el texto aquí" oninput="convertirMinusculas(); validarTexto(event)"></textarea>
+        <section class="text-section__alert">
+            <img class="text-section__alert-img" src="./img/Vector.png" alt="Logo De Alerta">
+            <p class="text-section__alert-description">Solo letras minúsculas y sin acentos</p>
+        </section>
+        <section class="text-section__buttons">
+            <button onclick="procesarTexto('encriptar')" class="text-section__button text-section__button--encrypt">Encriptar</button>
+            <button onclick="procesarTexto('desencriptar')" class="text-section__button text-section__button--decrypt">Desencriptar</button>
+        </section>
+
+        <section class="message-section">
+            <img class="message-section__img" src="./img/Imagen para mostrar.png" alt="Imagen">
+            <div class="message-section__content">
+                <h4 class="message-section__title">Ningún mensaje fue encontrado</h4>
+                <p class="message-section__description">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <p id="textoEncriptado" class="message-section__encrypt__or__decrypt"></p>
+            <button id="copiarBtn" onclick="copiarTexto()" class="message-section__button">Copiar</button>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="footer__text">Desarrollado por William German Arangruen Buitrago</p>
+    </footer>
+</body>
+</html>

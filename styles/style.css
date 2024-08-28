@@ -1,0 +1,205 @@
+/* Utilizaremos variables para valores repetitivos */
+:root {
+    --primary-color: #0A3871;
+    --secondary-color: #D8DFE8;
+    --background-color: #F3F5FC;
+    --font-family: 'Inter', sans-serif;
+  }
+  
+  /* Estilos generales */
+  * {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  
+  body {
+    min-width: 100vh;
+    background: var(--background-color);
+  }
+  
+  /* Sección del logotipo */
+  .Logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+    position: relative;
+    width: 7.5rem;
+    height: 3rem;
+    left: 2.5rem;
+    top: 2.5rem;
+  }
+  
+  .Logo-section__img {
+    width: 7.5rem;
+    height: 3rem;
+    flex: none;
+  }
+  
+  /* Área de texto */
+  .text-section__textarea {
+    position: absolute;
+    width: 41.125rem; /* 658px en rem */
+    height: 42.5rem; /* 680px en rem */
+    left: 15rem;
+    top: 10.5rem; /* 168px en rem */
+    background: var(--background-color);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 150%;
+    color: var(--primary-color);
+  }
+  
+  /* Alerta */
+  .text-section__alert {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* 8px en rem */
+    position: absolute;
+    width: 14.313rem; /* 229px en rem */
+    height: 1.125rem; /* 18px en rem */
+    left: 15rem;
+    top: 53.8125rem; /* 851px en rem */
+  }
+  
+  .text-section__alert-description {
+    width: 13.75rem; /* 220px en rem */
+    height: 1.125rem; /* 18px en rem */
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 0.75rem; /* 12px en rem */
+    line-height: 150%;
+    color: #495057;
+    opacity: 0.8;
+  }
+  
+  /* Botones */
+  .text-section__buttons {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem; /* 24px en rem */
+    position: absolute;
+    width: 42.5rem; /* 680px en rem */
+    height: 4.1875rem; /* 67px en rem */
+    left: 15rem;
+    top: 55.3125rem; /* 885px en rem */
+  }
+  
+  .text-section__button--encrypt,
+  .text-section__button--decrypt {
+    box-sizing: border-box;
+    padding: 1.5rem; /* 24px en rem */
+    width: 20.5rem; /* 328px en rem */
+    height: 4.1875rem; /* 67px en rem */
+    border-radius: 1.5rem; /* 24px en rem */
+    flex: none;
+  }
+  
+  .text-section__button--encrypt {
+    background: var(--primary-color);
+    color: #fff;
+  }
+  
+  .text-section__button--decrypt {
+    background: var(--secondary-color);
+    border: 0.0625rem solid var(--primary-color); /* 1px en rem */
+  }
+  
+  /* Sección de mensajes */
+.message-section {
+    position: absolute;
+    width: 25rem; /* 400px en rem */
+    height: 59rem; /* 944px en rem */
+    left: 62.5rem; /* 1000px en rem */
+    top: 2.5rem;
+    background: #fff;
+    box-shadow: 0px 1.5rem 2rem -0.5rem rgba(0, 0, 0, 0.08); /* 24px 32px -8px en rem */
+    border-radius: 2rem;
+  }
+  
+  .message-section__img {
+    display: block;
+    position: absolute;
+    width: 21rem; /* 336px en rem */
+    height: 19rem; /* 304px en rem */
+    left: 2rem;
+    top: 15.1875rem; /* 243px en rem */
+  }
+  
+  .message-section__content {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; /* 16px en rem */
+    position: absolute;
+    width: 21rem; /* 336px en rem */
+    height: 7.625rem; /* 122px en rem */
+    left: 2rem;
+    top: 36.625rem; /* 579px en rem */
+  }
+  
+  .message-section__title,
+  .message-section__description {
+    width: 100%;
+    font-family: var(--font-family);
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  .message-section__title {
+    font-size: 1.5rem; /* 24px en rem */
+    color: #343A40;
+  }
+  
+  .message-section__description {
+    font-size: 1rem; /* 16px en rem */
+    color: #495057;
+  }
+  
+  .message-section__encrypt__or__decrypt {
+    display: none;
+    position: absolute;
+    width: 21rem; /* 336px en rem */
+    height: 48.8125rem; /* 781px en rem */
+    left: 2rem;
+    top: 2rem;
+    font-family: var(--font-family);
+    font-size: 1.5rem; /* 24px en rem */
+    line-height: 150%;
+    color: #495057;
+  }
+  
+  .message-section__button {
+    display: none;
+    box-sizing: border-box;
+    padding: 1.5rem; /* 24px en rem */
+    position: absolute;
+    width: 21rem; /* 336px en rem */
+    height: 4.1875rem; /* 67px en rem */
+    left: 2rem;
+    top: 52.8125rem; /* 845px en rem */
+    border: 0.0625rem solid var(--primary-color); /* 1px en rem */
+    border-radius: 1.5rem; /* 24px en rem */
+  }
+  
+  /* Pie de página */
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 2.5rem;
+    top: 61.5rem; /* 984px en rem */
+  }
+  
+  .footer__text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem; /* 16px en rem */
+    text-align: center;
+    color: #495057;
+  }
+  
